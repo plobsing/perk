@@ -1,0 +1,8 @@
+{
+    "pir_nqp": {
+	"src/gen/actions.pir": "src/grammar-actions.nqp"
+    },
+    "pir_pge": {
+	"src/gen/grammar.pir": "src/grammar.pg"
+    }
+}
