@@ -1,8 +1,21 @@
 {
-    "pir_nqp": {
-	"src/gen/actions.pir": "src/grammar-actions.nqp"
+    "name": "perk",
+    "abstract": "a java-workalike language",
+    "description": "the perk java-workalike compiler for parrot VM",
+
+    "pir_nqp-rx": {
+	"src/gen_actions.pir":  "src/perk/Actions.pm",
+	"src/gen_compiler.pir": "src/perk/Compiler.pm",
+	"src/gen_grammar.pir":  "src/perk/Grammar.pm"
     },
-    "pir_pge": {
-	"src/gen/grammar.pir": "src/grammar.pg"
-    }
+
+    "pbc_pir": {
+	"perk/perk.pbc": "src/perk.pir",
+	"perk.pbc":      "perk.pir"
+    },
+
+    "doc_files": "README",
+
+    "installable_pbc": { "perk": "perk.pbc" },
+    "inst_lang":       "lang/perk.pbc"
 }

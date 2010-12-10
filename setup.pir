@@ -1,25 +1,46 @@
-# Copyright (C) 2006-2009, Parrot Foundation.
+#!/usr/bin/env parrot
 # $Id$
 
+=head1 NAME
+
+setup.pir - Python distutils style
+
+=head1 DESCRIPTION
+
+No Configure step, no Makefile generated.
+
+=head1 USAGE
+
+    $ parrot setup.pir build
+    $ parrot setup.pir test
+    $ sudo parrot setup.pir install
+
+=cut
+
 .sub 'main' :main
-    .param pmc argv
-    $S0 = shift argv # ignore argv[0]
-
-    load_language 'data_json'
-    $P0 = compreg 'data_json'
-    $S0 = slurp('setup.json')
-    $P1 = $P0.'compile'($S0)
-    $P1 = $P1() # extra execute to actually get the object
-
+    .param pmc args
+    $S0 = shift args
+    $P0 = read_json('setup.json')
     load_bytecode 'distutils.pbc'
-    .tailcall setup(argv :flat, $P1 :flat :named)
+    .tailcall setup(args :flat, $P0 :flat :named)
 .end
 
-.sub slurp
+.sub 'read_json'
     .param string filename
-    $P0 = new ['FileHandle']
-    $P0.'open'(filename)
+    $S0 = slurp(filename)
+    load_language 'data_json'
+    $P0 = compreg 'data_json'
+    $P1 = $P0.'compile'($S0)
+    $P1 = $P1() # eval code to get object
+    .return ($P1)
+.end
+
+.sub 'slurp'
+    .param string filename
+    $P0 = new 'FileHandle'
+    $P0.'open'(filename, 'r')
     $S0 = $P0.'readall'()
+    $P0.'close'()
     .return ($S0)
 .end
 
