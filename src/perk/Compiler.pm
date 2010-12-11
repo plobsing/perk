@@ -1,7 +1,7 @@
-class perk::Compiler is HLL::Compiler;
+class Perk::Compiler is HLL::Compiler;
 
 INIT {
-    perk::Compiler.language('perk');
-    perk::Compiler.parsegrammar(perk::Grammar);
-    perk::Compiler.parseactions(perk::Actions);
+    Perk::Compiler.language('perk');
+    Perk::Compiler.parsegrammar(Perk::Grammar);
+    Perk::Compiler.parseactions(Perk::Actions);
 }
