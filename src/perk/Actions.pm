@@ -1,6 +1,6 @@
 =begin comments
 
-Perk::Grammar::Actions - ast transformations for perk
+Perk::Actions - ast transformations for perk
 
 This file contains the methods that are used by the parse grammar
 to build the PAST representation of an perk program.
@@ -12,7 +12,7 @@ value of the comment is passed as the second argument to the method.
 
 =end comments
 
-class Perk::Grammar::Actions;
+class Perk::Actions;
 
 our @package;
 our @classes;
