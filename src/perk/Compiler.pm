@@ -5,3 +5,10 @@ INIT {
     Perk::Compiler.parsegrammar(Perk::Grammar);
     Perk::Compiler.parseactions(Perk::Actions);
 }
+
+# Local Variables:
+#   mode: cperl
+#   cperl-indent-level: 4
+#   fill-column: 100
+# End:
+# vim: expandtab shiftwidth=4 filetype=perl6:

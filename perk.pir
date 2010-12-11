@@ -1,5 +1,3 @@
-# $Id$
-
 =head1 TITLE
 
 perk.pir - A perk compiler.

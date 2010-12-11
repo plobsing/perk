@@ -1,5 +1,3 @@
-# $Id$
-
 =head1
 
 Perk::Builtins -- compiler helper routines

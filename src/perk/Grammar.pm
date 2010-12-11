@@ -820,3 +820,10 @@ token keyword {
         'class'       | 'finally'     | 'long'          | 'strictfp'     | 'volatile'
         'const'       | 'float'       | 'native'        | 'super'        | 'while'                     
 }
+
+# Local Variables:
+#   mode: cperl
+#   cperl-indent-level: 4
+#   fill-column: 100
+# End:
+# vim: expandtab shiftwidth=4 filetype=perl6:

@@ -1,5 +1,3 @@
-# $Id$
-
 =begin comments
 
 Perk::Grammar::Actions - ast transformations for perk
@@ -214,4 +212,4 @@ method statementExpression($/) {
 #   cperl-indent-level: 4
 #   fill-column: 100
 # End:
-# vim: expandtab shiftwidth=4:
+# vim: expandtab shiftwidth=4 filetype=perl6:

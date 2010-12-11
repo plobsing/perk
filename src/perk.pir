@@ -1,5 +1,3 @@
-# $Id$
-
 =head1 TITLE
 
 perk.pir - A perk compiler.
@@ -53,4 +51,3 @@ object.
 #   fill-column: 100
 # End:
 # vim: expandtab shiftwidth=4 ft=pir:
-
