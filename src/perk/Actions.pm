@@ -121,12 +121,13 @@ method normalClassDeclaration($/, $key) {
         make $class;
     }
 }
+
 method _compute_local_ns(Str $name) {
     my @ns;
     if pir::index($name, '.') > -1 {
         # Fully qualified class
         @ns := $name.split('.');
-    } elsif @classes.elems > 0 {
+    } elsif pir::elements(@classes) > 0 {
         # Inner class
         # XXX
         die("Classes " ~ pir::typeof(@classes));
