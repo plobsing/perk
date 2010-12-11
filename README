@@ -1,11 +1,7 @@
-+--------------------------------------------------------+
-| NOTE: I've moved development from googlecode to github |
-+--------------------------------------------------------+
-See: http://github.com/chrisdolan/perk/tree/master
-   git clone git://github.com/chrisdolan/perk.git
+OVERVIEW
+--------
 
-
-This is an implementation of the Java programming language. It is not
+Perk is an implementation of the Java programming language. It is not
 intended to be an implementation of the Java virtual machine, however,
 so it will not be interoperable with existing JavaVM bytecode.
 
@@ -17,3 +13,23 @@ From those roots, though, it's been modified to be more tightly
 coupled with Parrot and has been enhanced to support more syntax from
 the Java Language Specification, 3rd edition to parse a wider variety
 of Java sources (i.e. Java 1.6 and beyond).
+
+BUILDING
+--------
+
+To build Perk from source, you'll need Parrot 2.6 or newer, and the tools that
+come with it.
+
+To obtain Perk directly from its repository:
+
+    $ git clone git://github.com/plobsing/perk.git
+
+If you don't have git installed, you can get a tarball or zip
+of Perk from github by visiting http://github.com/plobsing/perk/tree/master
+and clicking "Download".  Then unpack the tarball or zip.
+
+Once you have a copy of the Perk sources, build it as follows:
+
+    $ cd perk
+    $ parrot setup.pir
+
